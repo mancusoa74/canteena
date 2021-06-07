@@ -24,3 +24,7 @@ I requisiti iniziali del sistema in oggetto sono i seguenti:
 11. Il sistema supporta messaggi multi-lingua in funzionew delle preferenze dell'utente
 
 
+## Architettura
+
+
+## Progetto di dettaglio
