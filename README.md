@@ -21,5 +21,6 @@ I requisiti iniziali del sistema in oggetto sono i seguenti:
 8. Il sistema supporta i dispositivi Android e iOS degli studenti
 9. Il sistema deve possedere un portale che fornisce la documentazione completa delle operazioni e del funzionamento del sistema
 10. I nuovi componenti del sistema devono essere sviluppati esclusivamente con tecnologie web
+11. Il sistema supporta messaggi multi-lingua in funzionew delle preferenze dell'utente
 
 
