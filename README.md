@@ -28,24 +28,17 @@ I requisiti iniziali del sistema in oggetto sono i seguenti:
 
 NPM package per le API, maggiori informazioni su NPM (https://www.npmjs.com/)
 
-Telegram bot tutorial con Node.js
-https://www.html.it/pag/398730/telegram-bot-in-node-js/
+- [Telegram bot tutorial con Node.js](https://www.html.it/pag/398730/telegram-bot-in-node-js/)
 
-Telegram bot tutorial con Node.js su Linux (Ubuntu)
-https://www.cloud.it/tutorial/come-creare-un-bot-per-telegram-con-nodejs-su-ubuntu-18-04.aspx
+- [Telegram bot tutorial con Node.js su Linux (Ubuntu)](https://www.cloud.it/tutorial/come-creare-un-bot-per-telegram-con-nodejs-su-ubuntu-18-04.aspx)
 
+- [Funzioni aggiuntive, immagini risposte etc + tutorial base ](https://www.section.io/engineering-education/telegram-bot-in-nodejs/)
 
-Funzioni aggiuntive, immagini risposte etc + tutorial base 
-https://www.section.io/engineering-education/telegram-bot-in-nodejs/
+- [Repository "Node.js Telegram Bot API"](https://github.com/yagop/node-telegram-bot-api/blob/master/README.md)
 
-Repository "Node.js Telegram Bot API"
-https://github.com/yagop/node-telegram-bot-api/blob/master/README.md
+- [Alcuni bot esitenti in JavaScript ](https://core.telegram.org/bots/samples#node-js)
 
-Alcuni bot esitenti in JavaScript 
-https://core.telegram.org/bots/samples#node-js
-
-Informazioni generali sui Bot di Telegram
-https://core.telegram.org/
+- [Informazioni generali sui Bot di Telegram](https://core.telegram.org/)
 
 ## Architettura
 
