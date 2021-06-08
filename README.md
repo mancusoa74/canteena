@@ -35,7 +35,7 @@ https://www.section.io/engineering-education/telegram-bot-in-nodejs/   // Funzio
 https://github.com/yagop/node-telegram-bot-api/blob/master/README.md   // Repository "Node.js Telegram Bot API"
 
 https://core.telegram.org/bots/samples#node-js      // Alcuni bot esitenti in JavaScript 
-https://core.telegram.org/           // Informazioni generali sui Bot di Telegram
+https://core.telegram.org/    // Informazioni generali sui Bot di Telegram
 
 ## Architettura
 
