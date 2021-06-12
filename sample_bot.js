@@ -2,7 +2,7 @@
 import { Telegraf } from 'telegraf'
 
 // prende il controllo del bot tramite il TOKEN fornito da BotFather
-const bot = new Telegraf("1791005859:AAGmbl_aC2MNVzID63z7DbsXnwjWosIwMfI")
+const bot = new Telegraf('INSERISCI QUI IL TUO TOKEN')
 
 console.log("Bot Telegram inizializzato correttamente!!!");
 
