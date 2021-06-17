@@ -24,7 +24,7 @@ Per le distribuzioni debian-based, al fine di essere sicuri di installare l'ulti
 
 
 ```
-sudo curl -sL https://deb.nodesource.com/setup_11.x | sudo -E 
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt update
 sudo apt install nodejs
 ```
