@@ -11,17 +11,21 @@ Per tale motivo per l'anno scolastico **2021/2021** si vuole dotare la scuola di
 
 I requisiti iniziali del sistema in oggetto sono i seguenti:
 
-1. Gli studenti per accedere alla mensa devono essere preventivamente registrati tramite https://mensa.agnelli.it
-2. Il sistema deve gestire in modo autonomo l'accesso alla mensa da parte degli studenti registrati
-3. Gli studenti non registrati non saranno gestiti dal sistema in oggetto
-4. Nell'orario di apertura della mensa, il sistema notifica ogni singolo studente sull'orario previsto di accesso alla mensa
-5. In caso in cui lo studente non si presentasse alla mensa, viene notificato per 3 volte consecutive con intervallo configurabile dal pannello di amministrazione
-6. Il sistema effettua le chiamate gestendo delle priorità amministrative per gruppi di studenti
-7. Gli studenti ricevono la notiifca dal sistema tramnite smartphone
-8. Il sistema supporta i dispositivi Android e iOS degli studenti
-9. Il sistema deve possedere un portale che fornisce la documentazione completa delle operazioni e del funzionamento del sistema
-10. I nuovi componenti del sistema devono essere sviluppati esclusivamente con tecnologie web
-11. Il sistema supporta messaggi multi-lingua in funzionew delle preferenze dell'utente
+| ID  | Descrizione Requisito                                                                                                           | Priorità |
+| --- | ------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| 1   | Gli studenti per accedere alla mensa devono essere preventivamente registrati tramite https://mensa.agnelli.it                  | MUST     |
+| 2   | Il sistema deve gestire in modo autonomo l'accesso alla mensa da parte degli studenti registrati                                | MUST     |
+| 3   | Gli studenti non registrati non saranno gestiti dal sistema in oggetto                                                          | MUST     |
+| 4   | Nell'orario di apertura della mensa, il sistema notifica ogni singolo studente sull'orario previsto di accesso alla mensa       | MUST     |
+| 5   | In caso in cui lo studente non si presentasse alla mensa, viene notificato per 3 volte consecutive con intervallo configurabile | MUST     |
+| 6   | Il sistema effettua le chiamate gestendo delle priorità amministrative per classe                                               | COULD    |
+| 7   | Gli studenti ricevono la notiifca dal sistema tramnite smartphone                                                               | MUST     |
+| 8   | Il sistema supporta i dispositivi Android e iOS degli studenti                                                                  | MUST     |
+| 9   | Il sistema deve possedere un portale che fornisce la documentazione completa delle operazioni e del funzionamento del sistema   | MUST     |
+| 10  | I nuovi componenti del sistema devono essere sviluppati esclusivamente con tecnologie web                                       | MUST     |
+| 11  | Il sistema supporta messaggi multi-lingua in funzionew delle preferenze dell'utente                                             | COULD    |
+| 12  | Il sistema si interfaccia all'applicazione esistente                                                                            | MUST     |
+| 13  | Non sono richieste modifiche al sistema esistente                                                                               | MUST     |
 
 ## Documentazione
 
