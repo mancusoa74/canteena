@@ -20,9 +20,12 @@ Per realizzare un bot in JS, sono necessari due elementi fondamentali:
 
 Per installare nodejs far riferimento al manuale del packet manager utilizzato.
 
-Per le distribuzioni Linux debian based, eseguire:
+Per le distribuzioni debian-based, al fine di essere sicuri di installare l'ultima versione di node, eseguire i seguenti passi: 
+
 
 ```
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt update
 sudo apt install nodejs
 ```
 
