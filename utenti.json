@@ -1,0 +1,22 @@
+{
+  "utenti": [
+    {
+      "id": 123,
+      "nome": "Mario",
+      "cognome": "Rossi",
+      "classe": "2A"
+    },
+    {
+      "id": 456,
+      "nome": "Giuseppe",
+      "cognome": "Verdi",
+      "classe": "2A"
+    },
+    {
+      "id": 789,
+      "nome": "Piero",
+      "cognome": "Bianchi",
+      "classe": "3C"
+    }
+  ]
+}
