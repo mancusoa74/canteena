@@ -127,6 +127,8 @@ Executing (default): PRAGMA INDEX_LIST(`prenotazioni`)
 
 ```
 
+*NOTA: il server è disponibile sulla porta 3000 sul proprio PC*
+
 ## Chiamate API
 
 Potete interagire con il server usando POSTMAN.
