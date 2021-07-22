@@ -26,6 +26,7 @@ I requisiti iniziali del sistema in oggetto sono i seguenti:
 | 11  | Il sistema supporta messaggi multi-lingua in funzionew delle preferenze dell'utente                                             | COULD    |
 | 12  | Il sistema si interfaccia all'applicazione esistente                                                                            | MUST     |
 | 13  | Non sono richieste modifiche al sistema esistente                                                                               | MUST     |
+| 14  | Gli utenti per essere notificati devono effettuare una registrazione al servizio canteena                                       | MUST     |
 
 ## Documentazione
 
