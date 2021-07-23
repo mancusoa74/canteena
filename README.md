@@ -48,4 +48,55 @@ NPM package per le API, maggiori informazioni su NPM (https://www.npmjs.com/)
 ## Architettura
 
 
+
+In figura l'architettura di alto livello (*HLA*)
+
+![HLA](media/HLA.png)
+
+L'architettura si compone di tre componenti principali:
+
+1. <u>Il sistema di gestione della mensa [già esistente]</u>: ha il compito di gestire le prenotazioni al servizio mensa da parte degli studenti e di permettere l'accesso al servizio tramite la scansione del codice a barre del badge studenti. 
+2. <u>Il sistema canteena [nuovo sistema]</u>: ha il compito di interfacciarsi al sistema di gestione esistente e di notificare gli utenti, del servizio mensa, confermando la possibilità di accedere al servizio mensa a partire da uno specifico momento.
+3. <u>I client utente</u>: sono gli utilizzatori del servizio, che attraverso una notifica push sul proprio smartphone personale, verranno notificati della disponibilità del servizio mensa. 
+
+### Funzionamento
+
+Come da policy scolastica, l'utente del servizio mensa deve autenticarsi al portale  https://mensa.agnelli.it/mensa/  e prenotare il pasto per il giorno successivo.
+
+Durante la mattinata, la segreteria valida e conferma tutte le prenotazioni, gestendo eventuali cancellazioni o aggiunte. Al termine della validazione la lista degli utenti che usufruiscono del servizio mensa, per il giorno corrente, è definitiva.
+
+A questo punto, il bot Canteena, interroga il servizio API della mensa, per ottenere la lista definitiva degli utenti del giorno. 
+Ora il bot, a partire dalle 13.50 è in grado di notificare al primo lotto di utenti la disponibilità del servizio, invitando gli utenti notificati a recarsi presso il corridoio d'ingresso al servizio mensa.
+
+Quando un utente fornisce il badge al personale addetto, questo viene letto con un lettore di codici a barre. Quest'informazione viene inviata dal token, presente in sala mensa, al server di gestione della mensa.
+
+Periodicamente il bot canteena, interroga il server della mensa (modalità pull) per ottenere la lista degli utenti che hanno già usufruito del servizio (in questo sistema una volta che il badge è scansionato si assume che l'utente sia stato servito ed uscito dalla coda di servizio).
+Il bot in questo modo conosce sia il numero di utenti notificati, sia il numero di utenti serviti, perciò può implementare una gestione efficace della coda e delle notifiche agli utenti.
+
+In linea di principio, non appena un utente viene servito, il bot può notificare l'utente successivo in lista d'attesa.
+Il bot è in grado di rinotificare un utente che non si è presentato al servizio mensa. Il numero delle notifiche è finito e per default stabilito a 3.
+Si lascia all'implementazione la gestione del batch delle notifiche, che può seguire policy specifiche adattabili per diversi periodi dell'anno o diversi anni scolastici.
+
+
+Questa gestione per quanto semplicistica permette di soddisfare i requisiti di progetto e raggiungere l'obiettivo finale nel ridurre l'assembramento degli utenti e fornire una qualità del servizio migliore (ridotti tempi di attesa per essere serviti).
+
+|ID | Priorità | Soddisfatto | Descrizione|
+|--|---|--|--|
+| 1  |  MUST     | Y | Soddisfatto dal sottosistema di gestione delle prenotazioni |
+| 2   |  MUST     | Y | Come desscritto sopra, l'utente viene notificato in maniera automatica dal nuovo bot|
+| 3   | MUST     | Y | Se l'utente non è registrato presso il server della mensa, e quindi non presente nella lista confermata dalla segreteria, non verrà certamente notificato dal nuovo bot|
+| 4   | MUST     | Y | Come descritto, la notifica viene inviata dal nuovo bot canteena e pertanto viene garantito che ogni singolo studente sarà notificato in merito all'orario di accesso alla mensa|
+| 5   | MUST     | Y | Come descritto il bot notifica gli utenti che non si sono presentati al token per un massimo di 3 volte.|
+| 6   | COULD     | N | Il bot notifica gli studenti in ordine alfabetico|
+| 7   | MUST     | Y | Gli studenti ricevono le notifiche tramite l'app Telegram sul proprio smartphone|
+| 8   | MUST     | Y | Telegram è disponibile per le maggiori piattaforme, incluse Android e iOS|
+| 9   | MUST     | Y | Il portale del servizio mensa include un link alla documentazione e guida utente per il sistema di notifica|
+| 10  |MUST     | Y | Il sistema canteena è sviluppato in javascript |
+| 11  | COULD     | N | La prima release del sistema invia notifiche in lingua italiana|
+| 12  | MUST     | Y | Il bot canteena si interfaccia via API HTTP al serve pre-esistente della mensa|
+| 13  | MUST     | Y | Il sistema esistente non richiede nessuna modifica rispetto alla versione corrente|
+| 14  | MUST     | Y | L'utente deve inviare una sola volta un comando di registrazione al bot canteena|
+
+
+
 ## Progetto di dettaglio
