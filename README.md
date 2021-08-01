@@ -1,7 +1,7 @@
 # canteena : mensa 2.0
 
 ## Introduzione
-Durante l'anno scolastico 2020/2021, in piena emergenza COVID-19, è stato necessario modificare e razionalizzare l'accesso alla mensa scolastica da parte degli studenti, al fine di garantire il necessario distanziamento sociale tra gli studenti e tra il personale della mensa stesso.
+Durante l'anno scolastico 2020/2021, in piena emergenza COVID-19, è stato necessario modificare e razionalizzare l'accesso alla mensa scolastica da parte degli studenti, al fine di garantire il necessario distanziamento sociale tra gli studenti e tra il personale della mensa stesso..
 
 Pertanto il flusso degli studenti, in ingresso alla mensa scolastica, è stato regolato manualmente dal personale scolastico. Ciò ha permesso il corretto controllo del flusso degli studenti; tuttavia ha richiesto l'impiego di personale scolastico che è quindi stato distratto da altre attività pianificate.
  
