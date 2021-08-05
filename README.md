@@ -104,12 +104,12 @@ Analizziamo ora il progetto in dettaglio. Nel seguito sarà descritto il funzion
 
 ### comando **/start***
 
-![start](https://github.com/mancusoa74/canteena/blob/main/start.jpeg)
+![start](media/start.jpeg)
 
 ### comando **/registra***
 
-![registra](https://github.com/mancusoa74/canteena/blob/main/registrazione.jpeg)
+![registra](media/registrazione.jpeg)
 
 ### **runtime***
 
-![runtime1](https://github.com/mancusoa74/canteena/blob/main/runtim1.jpeg)
+![runtime1](media/runtime1.jpeg)
