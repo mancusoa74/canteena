@@ -100,3 +100,16 @@ Questa gestione per quanto semplicistica permette di soddisfare i requisiti di p
 
 
 ## Progetto di dettaglio
+Analizziamo ora il progetto in dettaglio. Nel seguito sarà descritto il funzionamento dettagliato delle parti più rilevanti del codice.
+
+### comando **/start***
+
+![start](media/start.jpeg)
+
+### comando **/registra***
+
+![registra](media/registrazione.jpeg)
+
+### **runtime***
+
+![runtime1](media/runtime1.jpeg)
