@@ -100,3 +100,16 @@ Questa gestione per quanto semplicistica permette di soddisfare i requisiti di p
 
 
 ## Progetto di dettaglio
+Analizziamo ora il progetto in dettaglio. Nel seguito sarà descritto il funzionamento dettagliato delle parti più rilevanti del codice.
+
+### comando **/start***
+
+![start](https://github.com/mancusoa74/canteena/blob/main/start.jpeg)
+
+### comando **/registra***
+
+![registra](https://github.com/mancusoa74/canteena/blob/main/registrazione.jpeg)
+
+### **runtime***
+
+![runtime1](https://github.com/mancusoa74/canteena/blob/main/runtim1.jpeg)
