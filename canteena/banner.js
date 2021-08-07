@@ -32,7 +32,7 @@ function banner(version) {
     logger.info("|                   ██████  ██       ██   ██ ██  ███████                |");
     logger.info("|                                                                       |");
     logger.info("|                                                                       |");
-    logger.info("|                  CANTTENA BOT Version " + version + " RUNNING                     |");
+    logger.info("|                  CANTTENA BOT Version " + version + " (2021) RUNNING            |");
     logger.info("|                                                                       |");
     logger.info("+-----------------------------------------------------------------------+");
     logger.info();

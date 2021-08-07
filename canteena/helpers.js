@@ -14,7 +14,9 @@
 */
 
 const { logger } = require('./logger.js');
-const { find_db_user, register_db_user } = require('./db.js');
+const { mensa_get_iscritti, mensa_get_prenotati, mensa_get_serviti } = require('./mensa_client.js');
+const { find_db_user, find_db_user_by_id, update_db_user_tid, update_db_user_serve, reset_db_users_serve, find_db_user_unserved } = require('./db.js');
+
 
 function _user_exist(last_name, first_name) {
     return find_db_user(last_name, first_name).status;
@@ -93,7 +95,7 @@ async function handle_registra(ctx) {
             logger.info(`Inizio registrazione per utente [${id}] ${last_name} ${first_name}`);
             var { status, id } = await find_db_user(last_name, first_name);
             if (status) {
-                register_db_user(id, tid);
+                update_db_user_tid(id, tid);
                 logger.info("Registrazione completata!!");
                 ctx.reply("Registrazione completata!!");
             } else {
@@ -110,9 +112,98 @@ async function handle_registra(ctx) {
     logger.debug("handle_registra END");
 }
 
+async function reset_user_service_status() {
+    logger.debug("reset_user_service_status START");
+        await reset_db_users_serve();
+    logger.debug("reset_user_service_status END");
+}
+
+async function schedule_users_for_service() {
+    logger.debug("schedule_user_for_service START");
+    var prenotati = await mensa_get_prenotati();
+    if (prenotati.Status == 0 && prenotati.Result.length > 0) {
+        prenotati.Result.forEach(prenotato => {
+            update_db_user_serve(prenotato.IDAnagrafica, true);
+            logger.info(`Inserimento prenotazione pasto per utente [${prenotato.IDAnagrafica}]`);
+        })
+    } else {
+        if(prenotati.Result.length == 0)
+            logger.info("Non ci sono (più) utenti prpenotati per il servizio mensa.");
+        else
+            logger.error("ERRORE: impossibile recuperare la lista degli utenti prenotati al servizio mensa");
+    }
+    logger.debug("schedule_user_for_service END");
+}
+
+async function unschedule_users_for_service() {
+    logger.debug("unschedule_users_for_service START");
+    var serviti = await mensa_get_serviti();
+    if(serviti.Status ==  0 && serviti.Result.length > 0) {
+        serviti.Result.forEach(servito => {
+            update_db_user_serve(servito.IDAnagrafica, false);
+            logger.info(`Rimozione prenotazione pasto per utente [${servito.IDAnagrafica}]`);
+        })
+    } else {
+        if(serviti.Result.length == 0)
+            logger.info("Non ci sono (più) utenti serviti dal servizio mensa.");
+        else
+            logger.error("ERRORE: impossibile recuperare la lista degli utenti serviti dal servizio mensa");
+    }
+    logger.debug("unschedule_users_for_service END");
+}
+
+async function _notify_canteena_user(bot, id) {
+    logger.debug("_notify_canteena_use START");
+    var user = await find_db_user_by_id(id);
+    if (user.status == false) {
+        logger.error(`ERRORE: Non posso trovare e notificare utente id[${id}]`);
+    } else {
+        logger.info(`Notifica dell'utente ${user.user.Cognome} ${user.user.Nome} con tid[${user.user.tid}]`);
+        bot.telegram.sendMessage(user.user.tid, `Ciao ${user.user.Cognome}, è il tuo turno per la mensa.Mettiti in coda ora e sarai servito a breve. Buon Appetito!!!`);
+    }
+    logger.debug("_notify_canteena_use END");
+}
+
+async function notify_unserved_users(bot, limit) {
+    logger.debug("notify_unserved_users START");
+    var daservire = await find_db_user_unserved(limit);
+    if (daservire.status == true && daservire.users.length > 0) {
+        daservire.users.forEach(user => {
+            logger.info(`Notifica telegram utente [${user.dataValues.id}]`);
+            _notify_canteena_user(bot, user.dataValues.id);
+        })
+    } else {
+        if(daservire.users.length == 0)
+            logger.info("Non ci sono più utenti da servire");
+        else
+            log.error("ERRORE: impossibile recuperare la lista degli utenti schedulati dal DB");
+    }
+    logger.debug("notify_unserved_users END");
+}
+
+async function import_scheduled_user_from_mensa() {
+    logger.debug("import_scheduled_user_from_mensa START");
+    await reset_user_service_status();
+    await schedule_users_for_service();
+    logger.debug("import_scheduled_user_from_mensa END");
+}
+
+async function daily_canteen_notification_cycle(bot, max_users, iterations, period) {
+    var counter = iterations;
+    var timer_id = setInterval(async () => {
+        logger.info(`Inizio ciclo giornaliero di notifica utenti - iterazione [${counter}]`);
+        await unschedule_users_for_service();
+        await notify_unserved_users(bot, max_users);
+        counter--;
+        if (counter == 0)
+            clearInterval(timer_id);  
+    }, period*1000);
+}
+
 module.exports = {
     handle_start: handle_start,
     handle_help: handle_help,
     handle_registra: handle_registra,
-
+    import_scheduled_user_from_mensa: import_scheduled_user_from_mensa,
+    daily_canteen_notification_cycle: daily_canteen_notification_cycle
 };

@@ -1,5 +1,5 @@
 const express = require("express"); //importa il server express
-const { Sequelize, Model, DataTypes, INTEGER } = require('sequelize'); //importa sequelize per accedere al DB
+const { Sequelize, Op, Model, DataTypes, INTEGER } = require('sequelize'); //importa sequelize per accedere al DB
 
 const sequelize = new Sequelize("sqlite:mensa_api_server_mockup.sql3"); //inizializza l'accesso al DB
 let app = express(); //inizializza il server express per esporre l'API
@@ -9,10 +9,12 @@ class Anagrafica extends Model {}
 class Prenotazioni extends Model {}
 
 Anagrafica.init({
+    tid: DataTypes.INTEGER,
     Cognome: DataTypes.STRING,
     Nome: DataTypes.STRING,
     NomeClasse: DataTypes.STRING,
-    Credenziali: DataTypes.INTEGER
+    Credenziali: DataTypes.INTEGER,
+    daservire: DataTypes.BOOLEAN
 }, { sequelize, modelName: 'anagrafica', 
      tableName: 'anagrafica', 
      createdAt: false, 
@@ -33,7 +35,7 @@ sequelize.sync(); //sincronizza il modello con il DB
 console.log("DataBase inizializzato correttamente");
 
 //query al DB per ottenere la lista di tutti gli utenti
-async function GetAllUtenti() {
+async function GetAllAlunni() {
     let users = []; //array che contiene la lista di tutti gli utenti
     let utenti = await Anagrafica.findAll(); //query al DB
 
@@ -48,9 +50,33 @@ async function GetAllUtenti() {
 }
 
 //query al DB per ottenere la lista di tutte le prenotazioni
-async function GetAllPrenotazioni() {
+async function GetAllPrenotati() {
     let prenotazioni = []; //array che contiene la lista di tutte le prenotazioni
-    let _prenotazioni = await Prenotazioni.findAll(); //query al DB
+    let _prenotazioni = await Prenotazioni.findAll({
+        where: {OraConsumazione: 0}
+    }); //query al DB
+
+    _prenotazioni.forEach(prenotazione => {
+        prenotazione.dataValues['OraConsumazione'] = 0;
+        prenotazioni.push(prenotazione.dataValues);//aggiunge ogni utente all'array users
+    });
+    let jobj = {
+        "Status": 0,
+        "Result": prenotazioni
+    }
+    return(JSON.stringify(jobj));
+}
+
+//query al DB per ottenere la lista di tutte le prenotazioni
+async function GetAllServiti() {
+    let prenotazioni = []; //array che contiene la lista di tutte le prenotazioni
+    let _prenotazioni = await Prenotazioni.findAll({
+        where: {
+            OraConsumazione: {
+                [Op.ne]: 0
+            }
+        }
+    }); //query al DB
 
     _prenotazioni.forEach(prenotazione => {
         prenotazioni.push(prenotazione.dataValues);//aggiunge ogni utente all'array users
@@ -78,12 +104,17 @@ app.get('/api', function(req, res){
                 //http://localhost:3000/api?Command=GetAlunniList
                 case "GetAlunniList":
                     console.log("OK processing GetAlunniList"); 
-                    GetAllUtenti().then(utenti => res.send(utenti));
+                    GetAllAlunni().then(utenti => res.send(utenti));
+                    break;
+                //http://localhost:3000/api?Command=GetResClose
+                case "GetResClose":
+                    console.log("OK processing GetResClose");
+                    GetAllPrenotati().then(prenotazioni => res.send(prenotazioni));
                     break;
                 //http://localhost:3000/api?Command=GetAlreadyEatElseWhere
                 case "GetAlreadyEatElseWhere":
                     console.log("OK processing GetAlreadyEatElseWhere");
-                    GetAllPrenotazioni().then(prenotazioni => res.send(prenotazioni));
+                    GetAllServiti().then(serviti => res.send(serviti));
                     break;
                 default:
                     console.log("ERROR: comando non valido");

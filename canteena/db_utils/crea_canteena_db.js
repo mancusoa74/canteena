@@ -36,7 +36,8 @@ Anagrafica.init({
     Cognome: DataTypes.STRING(64),
     Nome: DataTypes.STRING(64),
     NomeClasse: DataTypes.STRING(64),
-    Credenziali: DataTypes.INTEGER
+    Credenziali: DataTypes.INTEGER,
+    daservire: DataTypes.BOOLEAN
 }, 
 { sequelize, modelName: 'anagrafica', 
      tableName: 'anagrafica', 
@@ -66,7 +67,8 @@ logger.info("DataBase inizializzato correttamente");
                 Cognome: user.Cognome,
                 Nome: user.Nome,
                 NomeClasse: user.NomeClasse,
-                Credenziali: user.Credenziali
+                Credenziali: user.Credenziali,
+                daservire: false
             });
             logger.info(`Inserting user ${user.Cognome} ${user.Nome} [${user.ID}]`);
         }); 
