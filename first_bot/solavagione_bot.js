@@ -2,7 +2,7 @@
 import { Telegraf } from 'telegraf'
 
 // prende il controllo del bot tramite il TOKEN fornito da BotFather
-const bot = new Telegraf('1819335845:AAGjkoiDYertWAMmHJPBLypNR8INuHLWVMI')
+const bot = new Telegraf('INSERISCI QUI IL TUO TOKEN')
 
 console.log("Bot Telegram inizializzato correttamente!!!");
 
@@ -37,13 +37,12 @@ bot.launch()
 // Gestisce lo shutdown del bot con ^C
 process.once('SIGINT', () => {
     console.log("SIGINT: stop Bot");
-    
-   // gestisce un comando custom /creatore
-bot.command('creatore', (ctx) => {
-    console.log("Handling bot command creatore...");
-    ctx.reply('Ciao, mi ha creato Matteo');
-  })
-  
     bot.stop('SIGINT');
 })
+
+// gestisce un comando custom /creatore
+bot.command('creatore', (ctx) => {
+    console.log("Handling bot command saluta...");
+    ctx.reply('Ciao!! Tu sei il mio creatore');
+  })
 
