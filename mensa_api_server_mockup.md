@@ -88,7 +88,7 @@ Per effettuare una prenotazione ho fornito un semplice script [alunno_badge.sh](
 Basta invocarlo con un parametro che rappresenta l'ID di uno studente. Questo creerà una prenotazione nel DB che poi sarà disponibile via API attraverso il nostro server di mock-up.
 
 ```
-./alunno_badge.sh 567
+./alunno_prenota.sh 567
 ```
 Otterete in output il print della tabella delle prenotazioni, inclusiva della prenotazione appena aggiunta (ultima linea)
 ```
