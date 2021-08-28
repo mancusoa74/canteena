@@ -1,0 +1,36 @@
+{
+    "Status": 0,
+    "Result": [
+        {
+            "id": 2,
+            "IDAnagrafica": 123,
+            "IDMetodo": 0,
+            "OraConsumazione": "2021-08-28 11:55:04"
+        },
+        {
+            "id": 3,
+            "IDAnagrafica": 444,
+            "IDMetodo": 0,
+            "OraConsumazione": "2021-08-28 11:55:11"
+        },
+        {
+            "id": 4,
+            "IDAnagrafica": 768,
+            "IDMetodo": 0,
+            "OraConsumazione": "2021-08-28 11:55:15"
+        },
+        {
+            "id": 5,
+            "IDAnagrafica": 111,
+            "IDMetodo": 0,
+            "OraConsumazione": "2021-08-28 11:55:18"
+        },
+        {
+            "id": 6,
+            "IDAnagrafica": 324,
+            "IDMetodo": 0,
+            "OraConsumazione": "2021-08-28 11:55:26"
+        }
+    ]
+}
+

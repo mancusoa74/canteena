@@ -1,0 +1,150 @@
+{
+    "Status": 0,
+    "Result": [
+        {
+            "id": 1,
+            "tid": 10,
+            "Cognome": "Antonio",
+            "Nome": "APETROAIE",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 2,
+            "tid": 20,
+            "Cognome": "Marco",
+            "Nome": "GARABELLO",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 3,
+            "tid": 30,
+            "Cognome": "Matteo",
+            "Nome": "SOLAVAGIONE",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 4,
+            "tid": 40,
+            "Cognome": "Luca",
+            "Nome": "BORTOLUZZI",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 5,
+            "tid": 50,
+            "Cognome": "Aleyandru Ioan",
+            "Nome": "CHINDRIS",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 6,
+            "tid": 60,
+            "Cognome": "Daniel",
+            "Nome": "DETTOLI",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 7,
+            "tid": 70,
+            "Cognome": "Pierpaolo",
+            "Nome": "QUIJADA GOMEZ",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 8,
+            "tid": 80,
+            "Cognome": "Dario",
+            "Nome": "RUGGIERI",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 9,
+            "tid": 90,
+            "Cognome": "Cristian",
+            "Nome": "SCIANNIMANICA",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 10,
+            "tid": 100,
+            "Cognome": "Michele",
+            "Nome": "SIRACUSA",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 11,
+            "tid": 110,
+            "Cognome": "Matteo",
+            "Nome": "SOLA",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 12,
+            "tid": 120,
+            "Cognome": "William",
+            "Nome": "VITERITTI",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 13,
+            "tid": 130,
+            "Cognome": "Francesco",
+            "Nome": "ZAINA",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 14,
+            "tid": 140,
+            "Cognome": "Simone",
+            "Nome": "LAUDANI",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 15,
+            "tid": 150,
+            "Cognome": "Federico Carlo Giuseppe",
+            "Nome": "POMBA",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        },
+        {
+            "id": 16,
+            "tid": 160,
+            "Cognome": "Giacomo",
+            "Nome": "LURGO",
+            "NomeClasse": "3 INFORMATICA",
+            "Credenziali": 0,
+            "daservire": false
+        }
+    ]
+}
+
