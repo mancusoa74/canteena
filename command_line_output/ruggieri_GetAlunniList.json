@@ -1,0 +1,151 @@
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Dload  Upload   Total   Spent    Left  Speed
+100  1961  100  1961    0     0   273k      0 --:--:-- --:--:-- --:--:--  273k
+{
+"Result": [
+{
+"Cognome": "Antonio",
+"Credenziali": 0,
+"Nome": "APETROAIE",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 1,
+"tid": 10
+},
+{
+"Cognome": "Marco",
+"Credenziali": 0,
+"Nome": "GARABELLO",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 2,
+"tid": 20
+},
+{
+"Cognome": "Matteo",
+"Credenziali": 0,
+"Nome": "SOLAVAGIONE",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 3,
+"tid": 30
+},
+{
+"Cognome": "Luca",
+"Credenziali": 0,
+"Nome": "BORTOLUZZI",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 4,
+"tid": 40
+},
+{
+"Cognome": "Aleyandru Ioan",
+"Credenziali": 0,
+"Nome": "CHINDRIS",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 5,
+"tid": 50
+},
+{
+"Cognome": "Daniel",
+"Credenziali": 0,
+"Nome": "DETTOLI",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 6,
+"tid": 60
+},
+{
+"Cognome": "Pierpaolo",
+"Credenziali": 0,
+"Nome": "QUIJADA GOMEZ",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 7,
+"tid": 70
+},
+{
+"Cognome": "Dario",
+"Credenziali": 0,
+"Nome": "RUGGIERI",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 8,
+"tid": 80
+},
+{
+"Cognome": "Cristian",
+"Credenziali": 0,
+"Nome": "SCIANNIMANICA",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 9,
+"tid": 90
+},
+{
+"Cognome": "Michele",
+"Credenziali": 0,
+"Nome": "SIRACUSA",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 10,
+"tid": 100
+},
+{
+"Cognome": "Matteo",
+"Credenziali": 0,
+"Nome": "SOLA",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 11,
+"tid": 110
+},
+{
+"Cognome": "William",
+"Credenziali": 0,
+"Nome": "VITERITTI",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 12,
+"tid": 120
+},
+{
+"Cognome": "Francesco",
+"Credenziali": 0,
+"Nome": "ZAINA",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 13,
+"tid": 130
+},
+{
+"Cognome": "Simone",
+"Credenziali": 0,
+"Nome": "LAUDANI",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 14,
+"tid": 140
+},
+{
+"Cognome": "Federico Carlo Giuseppe",
+"Credenziali": 0,
+"Nome": "POMBA",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 15,
+"tid": 150
+},
+{
+"Cognome": "Giacomo",
+"Credenziali": 0,
+"Nome": "LURGO",
+"NomeClasse": "3 INFORMATICA",
+"daservire": false,
+"id": 16,
+"tid": 160
+}
+],
+"Status": 0
