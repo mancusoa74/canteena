@@ -15,8 +15,8 @@
 
 const { logger } = require('./logger.js');
 const { Op, Sequelize, Model, DataTypes, INTEGER } = require('sequelize');
-//const sequelize = new Sequelize("sqlite:canteena.db");
-const sequelize = new Sequelize("sqlite:../mensa_api_server_mockup.sql3");
+const sequelize = new Sequelize("sqlite:canteena.db");
+//const sequelize = new Sequelize("sqlite:../mensa_api_server_mockup.sql3");
 
 
 // define the anagrafica table
@@ -47,13 +47,14 @@ async function find_db_user(last_name, first_name) {
             [Op.and]: [
                 sequelize.where(
                     sequelize.fn('lower', sequelize.col('Cognome')), 
-                    last_name),
+                    last_name.toLowerCase()),
                 sequelize.where(
                     sequelize.fn('lower', sequelize.col('Nome')), 
-                    first_name),
+                    first_name.toLowerCase()),
             ]
         } 
     });
+    
     if (user.length == 0) {
         logger.error(`Utente [${last_name} ${first_name}] non trovato nel DB`);
         return { status: false,

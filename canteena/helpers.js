@@ -18,7 +18,7 @@ const { mensa_get_iscritti, mensa_get_prenotati, mensa_get_serviti } = require('
 const { find_db_user, find_db_user_by_id, update_db_user_tid, update_db_user_serve, reset_db_users_serve, find_db_user_unserved } = require('./db.js');
 
 
-function _user_exist(last_name, first_name) {
+async function _user_exist(last_name, first_name) {
     return find_db_user(last_name, first_name).status;
 }
 
@@ -47,6 +47,8 @@ function handle_start(ctx) {
     var first_name = _ctx_to_user_info(ctx).first_name;
     var last_name = _ctx_to_user_info(ctx).last_name;
 
+    logger.debug(first_name);
+    logger.debug(last_name);
     if (_user_exist(last_name, first_name)) {
         logger.info(`Utente Telegram [${ctx.update.message.from.id}] ` +
                 `${ctx.update.message.from.last_name} ` +
