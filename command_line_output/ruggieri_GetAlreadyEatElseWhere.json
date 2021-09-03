@@ -1,0 +1,44 @@
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Dload  Upload   Total   Spent    Left  Speed
+100   539  100   539    0     0  59888      0 --:--:-- --:--:-- --:--:-- 59888
+{
+"Result": [
+{
+"IDAnagrafica": 77,
+"IDMetodo": 0,
+"OraConsumazione": "2021-08-20T10:22:28.000Z",
+"id": 1
+},
+{
+"IDAnagrafica": 123,
+"IDMetodo": 0,
+"OraConsumazione": "1970-01-01T00:00:00.000Z",
+"id": 3
+},
+{
+"IDAnagrafica": 792,
+"IDMetodo": 0,
+"OraConsumazione": "1970-01-01T00:00:00.000Z",
+"id": 4
+},
+{
+"IDAnagrafica": 2546,
+"IDMetodo": 0,
+"OraConsumazione": "1970-01-01T00:00:00.000Z",
+"id": 5
+},
+{
+"IDAnagrafica": 462,
+"IDMetodo": 0,
+"OraConsumazione": "1970-01-01T00:00:00.000Z",
+"id": 7
+},
+{
+"IDAnagrafica": 659,
+"IDMetodo": 0,
+"OraConsumazione": "1970-01-01T00:00:00.000Z",
+"id": 8
+}
+],
+"Status": 0
+}
