@@ -112,6 +112,6 @@ Analizziamo ora il progetto in dettaglio. Nel seguito sarà descritto il funzion
 
 ### **runtime***
 
-![runtime1](media/runtime1.jpeg)
+![runtime1](media/Solavagione_runtime1.png)
 
 ![runtime2](media/runtime2.jpeg)
