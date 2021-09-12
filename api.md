@@ -13,7 +13,7 @@ Lo scopo di **json-server** è permettere la creazione di un server REST complet
 json-server va installato come modulo globale, pertanto è necessario passare il flaf `-g` al classico comando npm
 
 ```
-sudo npm -g install json-sever
+sudo npm -g install json-server
 ```
 
 NOTA: *siccome installiamo un modulo a livello globale, dobbiamo farlo come root, pertanto usiamo sudo*
