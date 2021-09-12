@@ -18,6 +18,7 @@ sudo npm -g install json-server
 
 NOTA: *siccome installiamo un modulo a livello globale, dobbiamo farlo come root, pertanto usiamo sudo*
 
+TROUBLESHOOTING: Se l'installazione di json-server dovesse risultare in un errore a causa di una versione troppo datata di NodeJS, è possibile trovare il download ad una versione più recente seguendo [questo link](https://nodejs.org/en/).
 
 ## Data mockup
 
@@ -56,7 +57,7 @@ Ora che abbiamo il database con dei dati validi, possiamo far partire il json se
 Lanciamo il server con:
 
 ```
-json-server --wathc utenti.json
+json-server --watch utenti.json
 ```
 
 Se sulla console appare qualcosa di simile, siete apposto, il server è operativo:
@@ -87,6 +88,7 @@ In modo analogo il re dei tool GUI è [**postman**](https://www.postman.com/).
 
 Installate [postman per chrome](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=it) e fate il signup.
 
+In alternativa è possibile usare l'applicazione desktop, disponibile sia per Windows che per Linux e MacOS. È possibile trovare il download [QUI](https://www.postman.com/downloads/). Sarà comunque necessario avere Chrome per la procedura di registrazione/login, ma l'interfaccia risulta più intuitiva.
 
 ## Interagiamo con il database tramite l'API REST
 
